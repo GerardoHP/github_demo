@@ -5,12 +5,12 @@ import DisplayRepo from './DisplayRepoComponent';
 const RepoList = ({ repos }) => {
   return (
     <>
-      <h1>Repos</h1>
-      <ul>
+      <h3>Repos</h3>
+      <div className="row row-cols-1 row-cols-md-6">
         {repos.map(repo => (
           <DisplayRepo {...repo} key={repo.id} />
         ))}
-      </ul>
+      </div>
     </>
   );
 };
