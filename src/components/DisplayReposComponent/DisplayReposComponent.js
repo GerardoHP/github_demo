@@ -35,6 +35,7 @@ const DisplayRepos = () => {
         onSubmit={handleSubmit}
         username={username}
         onChange={handeleChange}
+        error={error}
       />
       {repos.length > 0 && (
         <div className="row">

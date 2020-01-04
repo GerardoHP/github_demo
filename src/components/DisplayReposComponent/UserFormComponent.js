@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TextInputComponent from '../common/TextInputComponent';
 
-const UserForm = ({ onSubmit, username, onChange }) => {
+const UserForm = ({ onSubmit, username, onChange, error }) => {
+  const textInputData = {
+    name: 'username',
+    label: 'User name',
+    value: username,
+    onChange,
+    error
+  };
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        type="text"
-        name="username"
-        id="username"
-        value={username}
-        onChange={onChange}
-      />
-      <button type="submit" value="Submit">Submit</button>
+    <form onSubmit={onSubmit} className="needs-validation" novalidate>
+      <TextInputComponent {...textInputData} />
+      <button type="submit" value="Submit">
+        Submit
+      </button>
     </form>
   );
 };
