@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import UserForm from './UserFormComponent';
 import RepoList from './ReposListComponent';
+import { getUserRepos } from '../../api/services/GithubService';
 
 const DisplayRepos = () => {
   const [username, setUsername] = useState('');
   const [repos, setRepos] = useState([]);
+  const [error, setError] = useState('');
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    setRepos([{ id: 1 }, { id: 2 }]);
+    let reposTemp = [];
+    try {
+      reposTemp = await getUserRepos(username);
+    } catch (err) {
+      setError(err.message);
+    }
+
+    setRepos(reposTemp);
   };
 
   const handeleChange = ({ target: { value } }) => setUsername(value); // TODO: add validations here
