@@ -10,12 +10,24 @@ const DisplayRepo = ({
   stargazers_count
 }) => {
   return (
-    <div>
-      <h3>Name: {name}</h3>
-      <h3>Full Name: {full_name}</h3>
-      <h3>Description: {description}</h3>
-      <h3>Stars: {stargazers_count}</h3>
-    </div>
+    <>
+      <div className="col mb-4">
+        <div className="card">
+          <div className="card-header">{name}</div>
+          <div className="card-body">
+            <h5 className="card-title">{full_name}</h5>
+            <p className="card-text">
+              {description}
+            </p>
+          </div>
+          <div className="card-body">
+            <a href="#" className="card-link">
+              {stargazers_count}
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

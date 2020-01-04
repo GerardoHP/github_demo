@@ -3,14 +3,20 @@ import PropTypes from 'prop-types';
 
 const DisplayUserInfo = ({ login, avatar_url, html_url }) => {
   return (
-    <>
-      <img src={avatar_url} alt={login} />
-      <h1>
-        <a href={html_url} target="_blank" rel="noopener noreferrer">
-          {login}
+    <div className="card" >
+      <img src={avatar_url} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <h5 className="card-title">{login}</h5>
+        <a
+          href={html_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+        >
+          Github
         </a>
-      </h1>
-    </>
+      </div>
+    </div>
   );
 };
 

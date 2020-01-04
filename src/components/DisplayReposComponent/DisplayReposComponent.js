@@ -37,10 +37,14 @@ const DisplayRepos = () => {
         onChange={handeleChange}
       />
       {repos.length > 0 && (
-        <>
-          <DisplayUserInfo {...user} />
-          <RepoList repos={repos} />
-        </>
+        <div className="row">
+          <div className="col-md-2 col-xs-12">
+            <DisplayUserInfo {...user} />
+          </div>
+          <div className="col-md-9 col-xs-12">
+            <RepoList repos={repos} />
+          </div>
+        </div>
       )}
     </>
   );
