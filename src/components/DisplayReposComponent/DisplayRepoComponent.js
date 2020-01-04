@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RatingStarComponent from '../common/RatingStarComponent';
 
 const DisplayRepo = ({
   id,
@@ -7,7 +8,8 @@ const DisplayRepo = ({
   full_name,
   description,
   html_url,
-  stargazers_count
+  stargazers_count,
+  stargazers_url
 }) => {
   return (
     <>
@@ -16,14 +18,13 @@ const DisplayRepo = ({
           <div className="card-header">{name}</div>
           <div className="card-body">
             <h5 className="card-title">{full_name}</h5>
-            <p className="card-text">
-              {description}
-            </p>
+            <p className="card-text">{description}</p>
           </div>
           <div className="card-body">
-            <a href="#" className="card-link">
-              {stargazers_count}
-            </a>
+            <RatingStarComponent
+              stargazers_count={stargazers_count}
+              stargazers_url={stargazers_url}
+            />
           </div>
         </div>
       </div>
@@ -37,7 +38,8 @@ DisplayRepo.propTypes = {
   full_name: PropTypes.string.isRequired,
   description: PropTypes.string,
   html_url: PropTypes.string.isRequired,
-  stargazers_count: PropTypes.number.isRequired
+  stargazers_count: PropTypes.number.isRequired,
+  stargazers_url: PropTypes.string
 };
 
 export default DisplayRepo;

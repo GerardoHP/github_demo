@@ -12,12 +12,19 @@ const UserForm = ({ onSubmit, username, onChange, error, isLoading }) => {
     error
   };
   return (
-    <form onSubmit={onSubmit} className="from-row needs-validation" novalidate>
-      <div className="form-row">
-        <TextInputComponent {...textInputData} />
-      </div>
-      <ButtonComponent disabled={!username} isLoading={isLoading} />
-    </form>
+    <>
+      <h3>User</h3>
+      <form
+        onSubmit={onSubmit}
+        className="from-row needs-validation"
+        novalidate
+      >
+        <div className="form-row">
+          <TextInputComponent {...textInputData} />
+        </div>
+        <ButtonComponent disabled={!username} isLoading={isLoading} />
+      </form>
+    </>
   );
 };
 

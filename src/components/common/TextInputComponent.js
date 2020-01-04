@@ -18,6 +18,12 @@ const TextInputComponent = ({ name, label, value, onChange, error }) => {
   );
 };
 
-TextInputComponent.propTypes = {};
+TextInputComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired
+};
 
 export default TextInputComponent;

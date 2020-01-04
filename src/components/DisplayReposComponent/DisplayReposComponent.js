@@ -53,10 +53,10 @@ const DisplayRepos = () => {
       <div>
         {repos.length > 0 && (
           <div className="row">
-            <div className="col-md-2 col-xs-12 py-xs-3">
+            <div className="col-md-2 col-xs-12 py-sm-3">
               <DisplayUserInfo {...user} />
             </div>
-            <div className="col-md-9 col-xs-12 py-xs-3">
+            <div className="col-md-9 col-xs-12 py-sm-3">
               <RepoList repos={repos} />
             </div>
           </div>

@@ -14,7 +14,10 @@ const ButtonComponent = ({ isLoading, disabled }) => {
   );
 };
 
-ButtonComponent.propTypes = {};
+ButtonComponent.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool
+};
 
 const LoadingSpan = () => (
   <>
