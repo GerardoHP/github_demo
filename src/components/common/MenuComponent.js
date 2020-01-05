@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as Icon } from '../../gjhp.svg';
 
-const Menu = props => {
+const Menu = () => {
   const [collapsed, setCollapsed] = useState(true);
   const handleClick = () => setCollapsed(!collapsed);
   return (
@@ -43,6 +43,14 @@ const Menu = props => {
               exact
             >
               Search
+            </NavLink>
+            <NavLink
+              to="/recent"
+              className="nav-item nav-link"
+              activeClassName="active"
+              exact
+            >
+              Recent
             </NavLink>
           </div>
         </div>

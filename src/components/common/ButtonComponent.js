@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const ButtonComponent = ({ isLoading, disabled }) => {
   return (
     <button
-      class="btn btn-primary"
-      type="button"
+      className="btn btn-primary"
+      type="submit"
       disabled={isLoading || disabled}
     >
       {isLoading ? <LoadingSpan /> : <SearchContent />}
@@ -22,7 +22,7 @@ ButtonComponent.propTypes = {
 const LoadingSpan = () => (
   <>
     <span
-      class="spinner-border spinner-border-sm"
+      className="spinner-border spinner-border-sm"
       role="status"
       aria-hidden="true"
     ></span>
