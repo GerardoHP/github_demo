@@ -9,7 +9,7 @@ const RecentSearchs = ({ users }) => {
     <>
       <Header
         title="Recent searchs"
-        description="Stores the recent searchs using Redux."
+        description="Stores the recent searchs using Redux. Note: This is not the most efficient way to do this, it is just a very simple example on how to use Redux."
       />
       <div className="row px-md-5 py-sm-3 row-cols-1 row-cols-md-6">
         {users.map(u => (

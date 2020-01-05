@@ -23,6 +23,7 @@ function App() {
             )}
           />
           <Route path="/recent" component={RecentSearchs} />
+          <Route path="/search/:username" component={DisplayRepos} />
           <Route path="/search" component={DisplayRepos} />
         </Switch>
       </div>

@@ -1,4 +1,9 @@
 const baseUrl = 'https://api.github.com';
+
+/**
+ * Gets all the user info from Github repo.
+ * @param {string} username The username to get info from.
+ */
 export const getUserRepos = username => {
   const url = `${baseUrl}/users/${username}/repos`;
   return fetch(url)

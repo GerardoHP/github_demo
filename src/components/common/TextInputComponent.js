@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const TextInputComponent = ({ name, label, value, onChange, error }) => {
   return (
     <div className="form-group col-md-6">
-      <label for={name}>{label}</label>
+      <label htmlFor={name}>{label}</label>
       <input
         type="text"
         className={`form-control${error ? ' is-invalid' : ''}`}

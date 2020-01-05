@@ -12,7 +12,7 @@ const UserForm = ({ onSubmit, username, onChange, error, isLoading }) => {
     error
   };
   return (
-    <form onSubmit={onSubmit} className="from-row needs-validation" novalidate>
+    <form onSubmit={onSubmit} className="from-row needs-validation" noValidate>
       <div className="form-row">
         <TextInputComponent {...textInputData} />
       </div>
