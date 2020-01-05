@@ -44,6 +44,14 @@ const Menu = props => {
             >
               Search
             </NavLink>
+            <NavLink
+              to="/recent"
+              className="nav-item nav-link"
+              activeClassName="active"
+              exact
+            >
+              Recent
+            </NavLink>
           </div>
         </div>
       </nav>

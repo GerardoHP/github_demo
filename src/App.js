@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import DisplayRepos from './components/DisplayReposComponent/DisplayReposComponent';
 import Menu from './components/common/MenuComponent';
 import Header from './components/common/HeaderComponent';
+import RecentSearchs from './components/RecentSearchsComponent/RecentSearchsComponent';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               />
             )}
           />
+          <Route path="/recent" component={RecentSearchs} />
           <Route path="/search" component={DisplayRepos} />
         </Switch>
       </div>

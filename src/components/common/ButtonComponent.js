@@ -6,7 +6,7 @@ const ButtonComponent = ({ isLoading, disabled }) => {
   return (
     <button
       class="btn btn-primary"
-      type="button"
+      type="submit"
       disabled={isLoading || disabled}
     >
       {isLoading ? <LoadingSpan /> : <SearchContent />}
