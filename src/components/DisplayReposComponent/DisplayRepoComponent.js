@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RatingStarComponent from '../common/RatingStarComponent';
+import RatingStar from '../common/RatingStarComponent';
 
 const DisplayRepo = ({
   id,
@@ -21,7 +21,7 @@ const DisplayRepo = ({
             <p className="card-text">{description}</p>
           </div>
           <div className="card-body">
-            <RatingStarComponent
+            <RatingStar
               stargazers_count={stargazers_count}
               stargazers_url={stargazers_url}
             />
