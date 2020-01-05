@@ -17,7 +17,11 @@ const DisplayRepo = ({
         <div className="card">
           <div className="card-header">{name}</div>
           <div className="card-body">
-            <h5 className="card-title">{full_name}</h5>
+            <h5 className="card-title">
+              <a href={html_url} target="_blank" rel="noopener noreferrer">
+                {full_name}
+              </a>
+            </h5>
             <p className="card-text">{description}</p>
           </div>
           <div className="card-body">
