@@ -26,7 +26,7 @@ const LoadingSpan = () => (
       role="status"
       aria-hidden="true"
     ></span>
-    Loading...
+    &nbsp;Loading...
   </>
 );
 

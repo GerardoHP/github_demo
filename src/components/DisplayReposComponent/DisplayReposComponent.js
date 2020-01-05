@@ -3,6 +3,7 @@ import UserForm from './UserFormComponent';
 import RepoList from './ReposListComponent';
 import { getUserRepos } from '../../api/services/GithubService';
 import DisplayUserInfo from './DisplayUserInfoComponent';
+import Header from '../common/HeaderComponent';
 
 const DisplayRepos = () => {
   const [username, setUsername] = useState('');
@@ -41,6 +42,7 @@ const DisplayRepos = () => {
 
   return (
     <>
+    <Header title="Search" description="Fill the desired username to get the public repos the user have." />
       <div className="py-md-5 py-sm-3" >
         <UserForm
           onSubmit={handleSubmit}

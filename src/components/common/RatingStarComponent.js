@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as StarIcon } from 'bootstrap-icons/icons/star-fill.svg';
 
-const RatingStarComponent = ({ stargazers_count, stargazers_url }) => {
+const RatingStar = ({ stargazers_count, stargazers_url }) => {
   return (
     <div className="star_rating">
       <a
@@ -18,9 +18,9 @@ const RatingStarComponent = ({ stargazers_count, stargazers_url }) => {
   );
 };
 
-RatingStarComponent.propTypes = {
+RatingStar.propTypes = {
   stargazers_count: PropTypes.number.isRequired,
   stargazers_url: PropTypes.string.isRequired
 };
 
-export default RatingStarComponent;
+export default RatingStar;
